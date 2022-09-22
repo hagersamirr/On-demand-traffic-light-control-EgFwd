@@ -47,13 +47,15 @@ There are two modes.
 
 ### MCAL
 * **DIO (Digital Input/Output):** this driver is responsible for the pins used to interface with external components. The driver customizes pins' direction to be input or output and their value to be high or low.
-* **GIE (Global Interrupt Enable):** the Global Interrupt (activation - deactivation) which is considered the global gate for all maskable interrupts.
-* **EXTI (External Interrupt):** this drive is responsible for all External Interrupt from setting the sense control for (INT0 - INT1 - INT2) and the call back function for each interrupt so that we can put the desired function in its ISR. This driver has two options configurations pre-build configurations which you can access from settings and post-built configurations which you can access by passing your inputs to the functions.
+* **Interrupts:** 
+Thiss driver contains:
+`(Global Interrupt Enable)` the Global Interrupt (activation - deactivation) which is considered the global gate for all maskable interrupts.
+`(External Interrupt)` responsible for all External Interrupt from setting the sense control for (INT0 - INT1 - INT2) and the call back function for each interrupt so that we can put the desired function in its ISR. 
 * **TIMERS (Timer0 - Timer1 - Timer2):** this driver has 3 timers. Timer0 and Timer2 are 8-bit timers with their options and configurations. Timer2 is a 16-bit timer with its options and configurations.
 
 ### ECUAL
 * **LED (Light Emitting Diode):** this driver contains options that facilitate the interfacing with LEDs by giving ID to every LED so that you can turn them on/off, toggle or blink with just their ID.
-
+* **BUTTONS:** this driver contains options that facilitate the interfacing with Buttons by initializing their configuration and Read their state if is pressed or not 
 ## Drivers Structure
 Every driver has 4 files `DriverName.h`  `DriverName.c`
 
